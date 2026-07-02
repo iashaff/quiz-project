@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style Preview 1 — Игровой</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: #2f1d12;
+      background:
+        radial-gradient(circle at 20% 20%, #ffe66d 0 14%, transparent 15%),
+        radial-gradient(circle at 80% 15%, #ff8fab 0 12%, transparent 13%),
+        radial-gradient(circle at 80% 85%, #7bdff2 0 16%, transparent 17%),
+        linear-gradient(135deg, #fff1a8, #ffc6ff 45%, #bde0fe);
+      display: grid;
+      place-items: center;
+      padding: 32px;
+    }
+    .card {
+      width: min(720px, 100%);
+      background: rgba(255, 255, 255, 0.86);
+      border: 5px solid #2f1d12;
+      border-radius: 34px;
+      box-shadow: 12px 12px 0 #2f1d12;
+      padding: 34px;
+      transform: rotate(-1deg);
+    }
+    .badge {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: .03em;
+      box-shadow: 4px 4px 0 #2f1d12;
+    }
+    h1 { font-size: clamp(34px, 6vw, 62px); line-height: .95; margin: 22px 0 10px; }
+    p { font-size: 20px; margin: 0 0 24px; }
+    .answers { display: grid; gap: 14px; }
+    button {
+      border: 4px solid #2f1d12;
+      border-radius: 22px;
+      background: #fff;
+      padding: 18px 20px;
+      text-align: left;
+      font: inherit;
+      font-size: 19px;
+      cursor: pointer;
+      box-shadow: 6px 6px 0 #2f1d12;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    button:nth-child(1) { background: #caffbf; }
+    button:nth-child(2) { background: #ffd6a5; }
+    button:nth-child(3) { background: #bdb2ff; }
+    button:nth-child(4) { background: #fdffb6; }
+    button:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 #2f1d12; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="badge">Вопрос 2 из 6 ☕</span>
+    <h1>Какой у тебя идеальный кофейный момент?</h1>
+    <p>Выбери вариант, который больше всего похож на тебя.</p>
+    <section class="answers">
+      <button>🎯 Тихое утро, чистый вкус, никаких лишних деталей</button>
+      <button>🍫 Что-то сладкое, красивое и чуть-чуть праздничное</button>
+      <button>🌙 Ночь, дедлайн и кофе, который держит меня в игре</button>
+      <button>🏡 Знакомая чашка, любимый столик, спокойный ритуал</button>
+    </section>
+  </main>
+</body>
+</html>
